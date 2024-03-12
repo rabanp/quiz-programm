@@ -5,14 +5,26 @@ export type Question = {
 
 }
 
-export type QuestionState = Question & {answers: string[]}
+export type QuestionState = Question & { answers: string[] }
 
 
-//TODO Question in jsonData
-export const fetchQuizQuestions =  ()=> {
-    let data : Question[] = []
-    fetch('./data.json')
-        .then((response) => response.json())
-        .then((json) => data = json);
-        return data
-        }
+//TODO Limit to ten questions
+export const fetchQuizQuestions = (): Question[] => {
+    let json = require('./data.json');
+    const  questions = []
+    //console.log(json);
+    const data = json.questions;
+    for(const element of data) {
+        //console.log(element);
+        questions.push(readQuestions(element));
+    }
+    return questions;
+}
+
+export const readQuestions = (q: any): Question => {
+    return {
+        question: q.question,
+        answers: q.answers,
+        correct_answer: q.correct_answer
+    };
+}
