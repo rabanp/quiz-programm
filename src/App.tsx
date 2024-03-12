@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 //Types
-import {Difficulty, fetchQuizQuestions, QuestionState} from "./API";
+import { fetchQuizQuestions, QuestionState} from "./API";
 //Components
 import QuestionCard from "./components/QuestionCard";
 
@@ -15,21 +15,20 @@ export type AnswerObject = {
 const TOTAL_QUESTIONS = 10;
 const App = () => {
     const [loading, setLoading] =useState(false)
-    const [question, setQuestion] = useState<QuestionState[]>([])
+    const [question, setQuestion] = useState<QuestionState[]>(fetchQuizQuestions())
     const [number, setNumber] = useState(0)
     const [userAnswer, setUserAnswer] = useState<AnswerObject[]>([])
     const [score, setScore] = useState(0)
     const [gameOver, setGameOver] = useState(true)
 
-    console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY))
+    console.log(fetchQuizQuestions())
 
 
-    const startTrivia = async () => {
+    const startTrivia =  () => {
         setLoading(true)
         setGameOver(false)
 
-        const newQuestions = await fetchQuizQuestions(
-            TOTAL_QUESTIONS, Difficulty.EASY);
+        const newQuestions =  fetchQuizQuestions();
 
         setQuestion(newQuestions);
         setScore(0);
@@ -48,14 +47,14 @@ const App = () => {
           //Add score if answer is correct
           if (correct) setScore(prev => prev + 1);
           //Save answer in array for user answer
-          const answerObject = {
+          const answerObject: AnswerObject = {
             question: question[number].question,
               answer,
               correct,
-              correctAnswer: question[number].correct_answer,
+              correct_answer: question[number].correct_answer,
 
           };
-          setUserAnswer((prev) => [...prev, answerObject]);
+          setUserAnswer((prev) => [...prev, answerObject])
       }
 
     };
@@ -74,13 +73,13 @@ const App = () => {
     return (
         <div className="App">
             <h1>REACT QUIZ</h1>
-            {gameOver // userAnswer.length === TOTAL_QUESTIONS ?
+            {gameOver ? // userAnswer.length === TOTAL_QUESTIONS ?
                  (
-            <Button className="start" onClick={startTrivia}>
+            <button className="start" onClick={startTrivia}>
                 Start
-            </Button>
+            </button>
                 ) : null}
-            {!gameOver ? <p className="score">Score:</p> : null}
+            {!gameOver ? <p className="score">Score: {score} </p> : null}
             {loading && <p>Loading Question ...</p>}
             {!loading && !gameOver && (
             <QuestionCard
@@ -97,7 +96,7 @@ const App = () => {
                 Next Question
             </button>
         ): null}
-        <div>
+        </div>
 
     );
 }
