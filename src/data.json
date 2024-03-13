@@ -99,16 +99,6 @@
       "correct_answer": "Aiguille Rouge"
     },
     {
-      "question": "Which planet is known as the Red Planet?",
-      "answers": [
-        "Earth",
-        "Mars",
-        "Jupiter",
-        "Venus"
-      ],
-      "correct_answer": "Mars"
-    },
-    {
       "question": "Was ist die insgesammt Pisten länge des Skigebiet Valfréjus & La Norma?",
       "answers": [
         "135 km",

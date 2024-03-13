@@ -8,17 +8,23 @@ export type Question = {
 export type QuestionState = Question & { answers: string[] }
 
 
-//TODO Limit to ten questions
 export const fetchQuizQuestions = (): Question[] => {
     let json = require('./data.json');
-    const  questions = []
+    const questions = []
+    const selectedQuestions = [];
     //console.log(json);
     const data = json.questions;
-    for(const element of data) {
+    for (const element of data) {
         //console.log(element);
         questions.push(readQuestions(element));
     }
-    return questions;
+    for (let i = 0; i < 10; i++) {
+        const item = questions[Math.floor(Math.random() * questions.length)];
+        selectedQuestions.push(item);
+        //Lösche aus Liste aller Fragen, keine doppleten Fragen
+        questions.splice(questions.indexOf(item), 1);
+    }
+    return selectedQuestions;
 }
 
 export const readQuestions = (q: any): Question => {
