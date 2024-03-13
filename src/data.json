@@ -1,14 +1,72 @@
 {
   "questions": [
     {
-      "question": "What is the capital of France?",
+      "question": "Wie viele Lifts hat das Skigebiet Les 2 Alpes insgesammt?",
       "answers": [
-        "Berlin",
-        "Madrid",
-        "Paris",
-        "Rome"
+        "13",
+        "22",
+        "45",
+        "31"
       ],
-      "correct_answer": "Paris"
+      "correct_answer": "45"
+    },
+    {
+      "question": "Wie hoch ist die Anzahl der Skipisten im Skigebiet La Plabne?",
+      "answers": [
+        "112",
+        "145",
+        "94",
+        "135"
+      ],
+      "correct_answer": "135"
+    },
+    {
+      "question": "Auf was für einer höhe liegt der Snowpark Snowpark Val Thornes?",
+      "answers": [
+        "2.500 m – 2.600 m",
+        "2.200 m – 2.300 m ",
+        "2.900 m – 3.000 m",
+        "1.800 m – 1.900 m"
+      ],
+      "correct_answer": "2.500 m – 2.600 m"
+    },
+    {
+      "question": "Wie hoch ist der höhste Punkt der Skiregion Les 3 Vallées?",
+      "answers": [
+        "3.230 m",
+        "2.974 m",
+        "3.733 m",
+        "4.018 m"
+      ],
+      "correct_answer": "3.230 m"
+    },
+    {
+      "question": "Wie lang ist die rote Piste des Skigebiet Hochzillertal-Hochfügen-Spieljoch?",
+      "answers": [
+        "74 km",
+        "41 km",
+        "52 km",
+        "29 km"
+      ],
+      "correct_answer": "52 km"
+    },    {
+      "question": "Auf welcher höhe liegt der Skiort des Skigebiet Les Menuires - St. Martin?",
+      "answers": [
+        "1.260 m",
+        "1.920 m",
+        "1.473 m",
+        "1.850 m"
+      ],
+      "correct_answer": "1.850 m"
+    },    {
+      "question": "Zu welcher Saison wurden im Skigebiet Tignes-Val d'Isère die 10er-Kabinenbahn „Solaise in Betrieb genommen“?",
+      "answers": [
+        "2009",
+        "2017",
+        "2011",
+        "2021"
+      ],
+      "correct_answer": "2017"
     },
     {
       "question": "Which planet is known as the Red Planet?",
@@ -21,14 +79,124 @@
       "correct_answer": "Mars"
     },
     {
-      "question": "What is the largest mammal in the world?",
+      "question": "Ab wann sind die neuen Sicherheitsregeln im Skigebiet Livigno in kraft getretten?",
       "answers": [
-        "Elephant",
-        "Blue Whale",
-        "Giraffe",
-        "Hippopotamus"
+        "2019",
+        "2013",
+        "2022",
+        "2015"
       ],
-      "correct_answer": "Blue Whale"
+      "correct_answer": "2022"
+    },
+    {
+      "question": "Wie heißt die Piste mit dem größten höhen unterschied in Europa?",
+      "answers": [
+        "Aiguille Rouge",
+        "de la Forêt",
+        "Belvédère",
+        "Les Arcs"
+      ],
+      "correct_answer": "Aiguille Rouge"
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "answers": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correct_answer": "Mars"
+    },
+    {
+      "question": "Was ist die insgesammt Pisten länge des Skigebiet Valfréjus & La Norma?",
+      "answers": [
+        "135 km",
+        "187 km",
+        "99 km",
+        "271 km"
+      ],
+      "correct_answer": "135 km"
+    },
+    {
+      "question": "Wie heißt der höhste Berg Österreichs?",
+      "answers": [
+        "Großglockner",
+        "Zugspitze",
+        "Kreuzspitz",
+        "Kitzsteinhorns"
+      ],
+      "correct_answer": "Großglockner"
+    },
+    {
+      "question": "Was ist das maximal Gefälle der Piste Black Mamba des Skigebiet Kitzsteinhorn/Maiskogel-Kaprun?",
+      "answers": [
+        "63 Prozent",
+        "58 Prozent",
+        "49 Prozent",
+        "67 Prozent"
+      ],
+      "correct_answer": "63 Prozent"
+    },
+    {
+      "question": "Wie viele Sessellifte hat das Skigebiet Grandvalira?",
+      "answers": [
+        "15",
+        "24",
+        "39",
+        "28"
+      ],
+      "correct_answer": "28"
+    },
+    {
+      "question": "Wo für ist das Skiegebiet SuperDévoluy bekannt?",
+      "answers": [
+        "Familienfreundlichkeit",
+        "Funparks",
+        "Pistenlänge",
+        "Nightlife/Clubszene"
+      ],
+      "correct_answer": "Familienfreundlichkeit"
+    },
+    {
+      "question": "Was ist das größte Skigebiet Österreichs??",
+      "answers": [
+        "Anton am Arlberg",
+        "Kitzbühel",
+        "Zell am See-Kaprun",
+        "SkiWelt"
+      ],
+      "correct_answer": "SkiWelt"
+    },
+    {
+      "question": "Wo findet man das höchstgelegene Skigebiet in Österreich??",
+      "answers": [
+        "Mayrhofen",
+        "Schladming",
+        "Hintertuxer Gletscher",
+        "Kitzbühel"
+      ],
+      "correct_answer": "Hintertuxer Gletscher"
+    },
+    {
+      "question": "Welches Skigebiet bietet die steilsten Abfahrten?",
+      "answers": [
+        "Arlberg",
+        "Saalbach-Hinterglemm",
+        "Serfaus-Fiss-Ladis",
+        "Zell am See-Kaprun"
+      ],
+      "correct_answer": "Arlberg"
+    },
+    {
+      "question": "Welches Skigebiet ist für seine Tiefschneemöglichkeiten bekannt?",
+      "answers": [
+        "Kitzbühel",
+        "Bad Gastein",
+        "Lech-Zürs",
+        "Schladming"
+      ],
+      "correct_answer": "Lech-Zürs"
     }
   ]
 }

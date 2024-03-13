@@ -20,8 +20,10 @@ const App = () => {
     const [userAnswer, setUserAnswer] = useState<AnswerObject[]>([])
     const [score, setScore] = useState(0)
     const [gameOver, setGameOver] = useState(true)
+    const [userName, setUserName] = useState<string>()
 
-    console.log(question);
+    //console.log(userName)
+    //console.log(question);
 
     const startTrivia = () => {
         setLoading(true)
@@ -55,7 +57,8 @@ const App = () => {
             };
             setUserAnswer((prev) => [...prev, answerObject])
         }
-
+    console.log(userAnswer)
+    console.log(number)
     };
 
     const nextQuestion = () => {
@@ -64,8 +67,6 @@ const App = () => {
 
         if (nextQuestion === TOTAL_QUESTIONS) {
             setGameOver(true);
-        } else {
-            setNumber(nextQuestion);
         }
     };
 
@@ -74,9 +75,16 @@ const App = () => {
             <h1>REACT QUIZ</h1>
             {gameOver ? // userAnswer.length === TOTAL_QUESTIONS ?
                 (
-                    <button className="start" onClick={startTrivia}>
-                        Start
-                    </button>
+                    <div>
+                        <form>
+                            <input
+                                onChange={(e) => setUserName(e.target.value)}
+                                name="userName" type="text"/>
+                        </form>
+                        <button className="start" onClick={startTrivia}>
+                            Start
+                        </button>
+                    </div>
                 ) : null}
             {!gameOver ? <p className="score">Score: {score} </p> : null}
             {loading && <p>Loading Question ...</p>}
@@ -90,11 +98,19 @@ const App = () => {
                     callback={checkAnswer}
                 />
             )}
-            {!gameOver && !loading && userAnswer.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
+            {!gameOver && !loading && userAnswer.length === number  && number !== TOTAL_QUESTIONS  ? (
                 <button className="next" onClick={nextQuestion}>
                     Next Question
                 </button>
             ) : null}
+            {
+                gameOver && userAnswer.length === TOTAL_QUESTIONS ? (
+                    <div>
+                        <div>{userName}</div>
+                        <div>{score}</div>
+                    </div>
+                ) : null
+            }
         </div>
 
     );
