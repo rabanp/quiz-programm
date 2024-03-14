@@ -69,14 +69,14 @@
       "correct_answer": "2017"
     },
     {
-      "question": "Which planet is known as the Red Planet?",
+      "question": "Welches skigebiet liegt am höhsten in Österrecih?",
       "answers": [
-        "Earth",
-        "Mars",
-        "Jupiter",
-        "Venus"
+        "Lech-Zürs",
+        "Hintertuxer Gletschergebiet",
+        "Kitzbühel",
+        "Bad Gastein"
       ],
-      "correct_answer": "Mars"
+      "correct_answer": "Hintertuxer Gletschergebiet"
     },
     {
       "question": "Ab wann sind die neuen Sicherheitsregeln im Skigebiet Livigno in kraft getretten?",
@@ -177,6 +177,16 @@
         "Zell am See-Kaprun"
       ],
       "correct_answer": "Arlberg"
+    },
+    {
+      "question": "Welches Skigebiet liegt am Tiefsten in Europa?",
+      "answers": [
+        "Arlberg",
+        "Saalbach-Hinterglemm",
+        "Schladming",
+        "Zugspitzplatt"
+      ],
+      "correct_answer": "Zugspitzplatt"
     },
     {
       "question": "Welches Skigebiet ist für seine Tiefschneemöglichkeiten bekannt?",

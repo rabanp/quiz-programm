@@ -9,7 +9,7 @@ export enum IncentiveSaying {
     "Diejenigen, die erfolgreich sind, sind oft einfach nur diejenigen, die nie aufgeben. Versuche es nochmal!"     = 7,
     "Der einzige Weg, garantiert zu versagen, ist, es gar nicht erst zu versuchen. Also los, gib dein Bestes!"      = 8,
     "Das war knapp! Schaffst du beim naechsten Mal die volle Punktzahl?"                                            = 9,
-    "Du scheinst ein richtiger Experte zu sein! SchaBst du das auch ein zweites Mal?"                               = 10
+    "Du scheinst ein richtiger Experte zu sein! Schaffst du das auch ein zweites Mal?"                              = 10
 }
 
 // console.log(IncentiveSaying["Jedes Scheitern ist nur ein weiterer Schritt auf dem Weg zum Erfolg. Gib nicht auf!"]);

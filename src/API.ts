@@ -18,6 +18,8 @@ export const fetchQuizQuestions = (): Question[] => {
         //console.log(element);
         questions.push(readQuestions(element));
     }
+    //console.log(questions.length)
+
     for (let i = 0; i < 10; i++) {
         const item = questions[Math.floor(Math.random() * questions.length)];
         selectedQuestions.push(item);

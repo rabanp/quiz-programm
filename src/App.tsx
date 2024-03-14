@@ -4,6 +4,7 @@ import {fetchQuizQuestions, QuestionState} from "./API";
 //Components
 import QuestionCard from "./components/QuestionCard";
 import {IncentiveSaying} from "./components/score";
+import {GlobalStyle, Wrapper} from "./App.styles";
 
 export type AnswerObject = {
     question: string;
@@ -76,38 +77,42 @@ const App = () => {
     }
 
     const getScoreMessage = (score: number) => {
-            switch (score) {
-                case 0:
-                    return IncentiveSaying[0];
-                case 1:
-                    return IncentiveSaying[1];
-                case 2:
-                    return IncentiveSaying[2];
-                case 3:
-                    return IncentiveSaying[3];
-                case 4:
-                    return IncentiveSaying[4];
-                case 5:
-                    return IncentiveSaying[5];
-                case 6:
-                    return IncentiveSaying[6];
-                case 7:
-                    return IncentiveSaying[7];
-                case 8:
-                    return IncentiveSaying[8];
-                case 9:
-                    return IncentiveSaying[9];
-                case 10:
-                    return IncentiveSaying[10];
-                default:
-                    return "You did it!";
-            }
+        switch (score) {
+            case 0:
+                return IncentiveSaying[0];
+            case 1:
+                return IncentiveSaying[1];
+            case 2:
+                return IncentiveSaying[2];
+            case 3:
+                return IncentiveSaying[3];
+            case 4:
+                return IncentiveSaying[4];
+            case 5:
+                return IncentiveSaying[5];
+            case 6:
+                return IncentiveSaying[6];
+            case 7:
+                return IncentiveSaying[7];
+            case 8:
+                return IncentiveSaying[8];
+            case 9:
+                return IncentiveSaying[9];
+            case 10:
+                return IncentiveSaying[10];
+            default:
+                return "You did it!";
         }
+    }
 
 
-            return (
+    return (
+        <>
+            <GlobalStyle/>
+            <Wrapper>
+
                 <div className="App">
-                    <h1>REACT QUIZ</h1>
+                    <h1>SKI QUIZ</h1>
                     {!isRunning && !isFinshed ?
                         (
                             <div>
@@ -137,13 +142,14 @@ const App = () => {
                             <div>{userName}</div>
                             <div>{score}</div>
                             <div>{getScoreMessage(score)}</div>
-                            <button onClick={resetGame}>Quiz erneut starten</button>
+                            <button className="button" onClick={resetGame}>Quiz erneut starten</button>
                         </div>
                     ) : null
                     }
                 </div>
-
-            );
+            </Wrapper>
+        </>
+    );
 }
 
 export default App;

@@ -18,16 +18,16 @@ userAnswer,
 questionNr,
 totalQuestion,
 }: Props) => (
-    <div>
+    <div className={"questionWrapper"}>
         <p className="number">
             Question: {questionNr} / {totalQuestion}
         </p>
-        <p dangerouslySetInnerHTML={{__html: question}}/>
+        <p dangerouslySetInnerHTML={{__html: question}} className={"questions"}/>
         <div>
             {answers.map(answer => (
                 <div key={answer}>
-                    <button disabled={!!userAnswer} value= {answer} onClick={callback}>
-                        <span dangerouslySetInnerHTML={{__html: answer}}/>
+                    <button disabled={!!userAnswer}  value= {answer} className={"answerOptions"} onClick={callback}>
+                        <span dangerouslySetInnerHTML={{__html: answer}} />
                     </button>
                 </div>
             ))}
